@@ -1,0 +1,10 @@
+# Ignore everything in the data folder
+data/*
+src/step1_INR/tb_logs/*
+src/step1_INR/images_dir/*
+.idea/
+
+# But keep this specific file
+!data/data_structure.txt
+
+src/step3_cWDM/runs/*

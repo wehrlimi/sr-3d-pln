@@ -1,0 +1,17 @@
+# environment.yml  (for *conversion only*)
+name: env_step0_preprocess
+channels: [conda-forge]
+channel_priority: strict
+dependencies:
+  - python=3.10
+  - numpy
+  - pandas
+  - nibabel
+  - pydicom>=2.4
+  - dicom2nifti
+  - pillow                     # <- this is what torchvision was dragging in
+  - pylibjpeg                  # modern handlers (fast, pure-Python glue)
+  - pylibjpeg-libjpeg          # JPEG/JPEG-LS backend
+  - pylibjpeg-openjpeg         # JPEG 2000 backend
+  - gdcm                       # robust fallback for many syntaxes
+  - openpyxl

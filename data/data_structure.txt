@@ -1,0 +1,55 @@
+You just have to put your fastMRI data here!
+
+- knee_mri_clinical_seq_batch2 (this is the fastMRI source folder of the DICOMS)
+
+The structure below is **only for user reference** and will appear once all steps have been executed successfully:
+
+- 00_sorted_nifti_for_INR
+    - fastMRI_nifti
+        - patientID
+            - studyID
+                - axial.nii.gz
+                - cor.nii.gz
+                - sag.nii.gz
+    - TD_data_nifti
+        -...
+
+- 01_INR
+    - fastMRI_INR
+        - patientID_studyID_INR.nii.gz
+    - TD_data_INR
+        -...
+
+- 02_SEG
+    - fastMRI_INR_TotSeg
+            - patientID_studyID_INR_TotSeg
+                        - patientID_studyID_INR_TotSeg.nii.gz
+                                    - femur_left.nii.gz
+                                                - femur_right.nii.gz
+                                                            - fibula
+                                                                        - patella.nii.gz
+                                                                                    - tibia.nii.gz
+    - TD_data_INR_TotSeg
+        -...
+
+- 03_cWDM
+    - fastMRI_INR_TotSeg_PrePro
+        - train
+            - patientID_studyID_INR_TotSeg_GT.nii.gz
+            - patientID_studyID_INR_TotSeg_diseased.nii.gz
+            - patientID_studyID_INR_TotSeg_mask.nii.gz
+        - test
+            - patientID_studyID_INR_TotSeg_diseased.nii.gz
+            - patientID_studyID_INR_TotSeg_mask.nii.gz
+        - test_GT
+            - patientID_studyID_INR_TotSeg_GT.nii.gz
+    - TD_data_INR_TotSeg_PrePro
+        - test
+            - ...
+        - test_GT
+            - ...
+
+    - fastMRI_INR_TotSeg_cWDM
+        - sample_date_patientID_studyID_INR_TotSeg.nii.gz
+    - TD_data_INR_TotSeg_cWDM
+        - ...

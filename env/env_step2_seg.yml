@@ -1,0 +1,6 @@
+name: env_step2_seg
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      - TotalSegmentator
